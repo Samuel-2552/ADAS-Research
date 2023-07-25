@@ -28,7 +28,7 @@ Camera Used - [Pi Camera Module 2]()
 
 ## Field of View Estimation
 
-Our aim is to detect and focus on objects that are within a certain percentage of the center of our image, which is specified in [constraints.json](/code/constraints.json). Here's how we computed the start and end points to represent this Field of View (FOV):
+Our aim is to detect and focus on objects that are within a certain percentage of the center of our image, which is specified in [constraints.json](./code/constraints.json). Here's how we computed the start and end points to represent this Field of View (FOV):
 
 1. **Percentage to Decimal:** First, we converted the given percentage into a decimal. For instance, if the percentage is 75, the decimal equivalent would be 0.75.
 
@@ -66,19 +66,19 @@ Objects detected outside of this region (whose center_x does not lie in out FOV 
 ## Test Run
 
 The data (images) required for running tests has been generated from a stable diffusion model (Bing AI).  
-For real world uses, the values in [constraints.json](/code/constraints.json) needs to be calibrated with the camera position on the motor drive.  
+For real world uses, the values in [constraints.json](./code/constraints.json) needs to be calibrated with the camera position on the motor drive.  
 
 ##### Objects of Interest:
 `["car", "person", "truck", "traffic light", "traffic lights", "bicycle", "motorcycle", "bus", "train", "truck"]`
 
 ### Test Image
-![Test Image](/data/carPOV/c1.jpeg)
+![Test Image](./data/carPOV/c1.jpeg)
 
 ### Resultant Image
-![Resultant Image](/tests/runs/detect/predict/c1.jpeg)
+![Resultant Image](./tests/runs/detect/predict/c1.jpeg)
 
 ## Test Run Result
-![Results of Test Run](/public/test_run1_OP.png)
+![Results of Test Run](./public/test_run1_OP.png)
 
 
 The low Confidence predictions would be eliminated in production.e
