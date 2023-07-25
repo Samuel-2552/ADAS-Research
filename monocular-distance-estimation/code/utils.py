@@ -1,0 +1,19 @@
+import json
+
+with open('./constraints.json') as f:
+    constraints = json.load(f)
+
+IMAGE_WIDTH = constraints["IMAGE_WIDTH"]
+REAL_WIDTH = constraints["REAL_WIDTH"]
+PERCENTAGE_FOV = constraints["PERCENTAGE_FOV"]
+
+# Constants for the Raspberry Pi Camera Module v2
+FOCAL_LENGTH_MM = constraints["FOCAL_LENGTH_MM"]
+SENSOR_WIDTH_MM = constraints["SENSOR_WIDTH_MM"]
+
+FOCAL_LENGTH_PIXELS = (IMAGE_WIDTH * FOCAL_LENGTH_MM) / SENSOR_WIDTH_MM
+
+PERCENTAGE_DECIMAL = PERCENTAGE_FOV / 100
+REMAINING_DECIMAL = (1 - PERCENTAGE_DECIMAL) / 2
+START_WIDTH = IMAGE_WIDTH * REMAINING_DECIMAL
+END_WIDTH = IMAGE_WIDTH * (1 - REMAINING_DECIMAL)
