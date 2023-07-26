@@ -21,18 +21,17 @@ objects_heights = {
     "cow": 1.4
 }
 
-# Choose a reference object of know width and distance from the camera, then measure the width of image after the capture and calculate the focal length in pixels using the below given function
+# Choose a reference object of known height and distance from the camera, then measure the height of image after the capture and calculate the focal length in pixels using the below given function
 
 
-image_height_of_object_pxl = 500
-actual_distance_of_object_meters = 12
-actual_height_of_object_meters = objects_heights["car"]
+image_height_of_object_pxl_val = 175
+actual_distance_of_object_meters_val = 12
+actual_height_of_object_meters_val = objects_heights["car"]
 
 
 
-def focalLengthPxl(image_width_of_object_pxl, actual_distance_of_object_meters, actual_width_of_object_meters):
-    return (image_width_of_object_pxl*actual_distance_of_object_meters)/actual_width_of_object_meters
+def focalLengthPxl(image_height_of_object_pxl, actual_distance_of_object_meters, actual_height_of_object_meters):
+    return (image_height_of_object_pxl*actual_distance_of_object_meters)/actual_height_of_object_meters
 
 
-focalLength = focalLengthPxl(
-    image_width_of_object_pxl, actual_distance_of_object_meters, actual_width_of_object_meters)
+focal_length = focalLengthPxl(image_height_of_object_pxl_val, actual_distance_of_object_meters_val,actual_height_of_object_meters_val)
