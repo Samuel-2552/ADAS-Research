@@ -88,6 +88,7 @@ for i in range(img_range_st,img_range_end):
 # frame_height = int(video_capture.get(4))
 # fps = video_capture.get(cv2.CAP_PROP_FPS)
 
+# The sample video was changed to mp4 later to push into git (reduce the size)
 # output_path = '../output/videos/out_vidtest.avi'
 # output_video = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'XVID'), fps, (frame_width, frame_height))
 
