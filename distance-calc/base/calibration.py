@@ -29,9 +29,9 @@ actual_distance_of_object_meters_val = 12
 actual_height_of_object_meters_val = objects_heights["car"]
 
 
-
 def focalLengthPxl(image_height_of_object_pxl, actual_distance_of_object_meters, actual_height_of_object_meters):
     return (image_height_of_object_pxl*actual_distance_of_object_meters)/actual_height_of_object_meters
 
 
-focal_length = focalLengthPxl(image_height_of_object_pxl_val, actual_distance_of_object_meters_val,actual_height_of_object_meters_val)
+focal_length = focalLengthPxl(image_height_of_object_pxl_val,
+                              actual_distance_of_object_meters_val, actual_height_of_object_meters_val)
